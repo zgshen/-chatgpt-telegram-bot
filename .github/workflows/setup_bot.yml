@@ -21,16 +21,14 @@ jobs:
 
       - name: Configuration
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          OPENAI_API_KEY_VAL: ${{ secrets.OPENAI_API_KEY }}
+          TELEGRAM_BOT_TOKEN_VAL: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         run: | 
-          export OPENAI_API_KEY="$OPENAI_API_KEY"
-          export TELEGRAM_BOT_TOKEN="$TELEGRAM_BOT_TOKEN"
+          export OPENAI_API_KEY="OPENAI_API_KEY_VAL"
+          export TELEGRAM_BOT_TOKEN="TELEGRAM_BOT_TOKEN_VAL"
           echo $OPENAI_API_KEY
           echo $TELEGRAM_BOT_TOKEN
           echo "done..."
-          
-      - name: Run
-        run: |
+          ls -l
           pip3 install -r requirements.txt
           python bot.py
