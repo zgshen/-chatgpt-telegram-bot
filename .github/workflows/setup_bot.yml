@@ -26,3 +26,4 @@ jobs:
         run: | 
           pip3 install -r requirements.txt
           python bot.py &
+          ps -ef|grep bot
