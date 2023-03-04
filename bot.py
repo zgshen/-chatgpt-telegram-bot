@@ -24,7 +24,4 @@ def echo_all(message):
 
 
 if __name__ == '__main__':
-    print('==================>')
-    print('start running....')
-    print("test t:" + os.getenv('TELEGRAM_BOT_TOKEN'))
     bot.infinity_polling()
