@@ -25,4 +25,4 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         run: | 
           pip3 install -r requirements.txt
-          nohup python bot.py &
+          python bot.py
